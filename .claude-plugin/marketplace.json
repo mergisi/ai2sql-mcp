@@ -1,0 +1,38 @@
+{
+  "name": "AI2SQL",
+  "description": "Generate, explain, optimize and fix SQL queries from natural language. Supports PostgreSQL, MySQL, SQL Server, Snowflake, Oracle, and SQLite.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Mustafa Ergisi",
+    "url": "https://ai2sql.io"
+  },
+  "mcp_servers": {
+    "ai2sql": {
+      "command": "npx",
+      "args": ["-y", "ai2sql-mcp"],
+      "env": {
+        "AI2SQL_API_KEY": ""
+      }
+    }
+  },
+  "tools": [
+    {
+      "name": "generate_sql",
+      "description": "Generate SQL from natural language"
+    },
+    {
+      "name": "explain_sql",
+      "description": "Explain a SQL query in plain English"
+    },
+    {
+      "name": "optimize_sql",
+      "description": "Optimize a SQL query for performance"
+    },
+    {
+      "name": "fix_sql_error",
+      "description": "Fix a broken SQL query from error message"
+    }
+  ],
+  "categories": ["database", "sql", "developer-tools"],
+  "keywords": ["sql", "database", "text-to-sql", "postgresql", "mysql", "query-generator"]
+}

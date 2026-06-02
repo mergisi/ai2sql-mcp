@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "ai2sql": {
+      "command": "npx",
+      "args": ["-y", "ai2sql-mcp"],
+      "env": {
+        "AI2SQL_API_KEY": ""
+      }
+    }
+  }
+}

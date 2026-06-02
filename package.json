@@ -1,0 +1,36 @@
+{
+  "name": "ai2sql-mcp",
+  "version": "1.0.6",
+  "description": "AI2SQL MCP Server - Generate, explain, optimize and fix SQL queries from natural language inside Claude Code",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": {
+    "ai2sql-mcp": "src/index.js"
+  },
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "keywords": [
+    "ai2sql",
+    "sql",
+    "mcp",
+    "claude",
+    "text-to-sql",
+    "database",
+    "postgresql",
+    "mysql"
+  ],
+  "author": "Mustafa Ergisi",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mergisi/ai2sql-mcp.git"
+  },
+  "homepage": "https://github.com/mergisi/ai2sql-mcp",
+  "bugs": {
+    "url": "https://github.com/mergisi/ai2sql-mcp/issues"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  }
+}

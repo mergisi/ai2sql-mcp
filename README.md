@@ -18,6 +18,32 @@
 
 ---
 
+## Hosted text-to-SQL MCP server (Cursor, Claude, ChatGPT, VS Code)
+
+AI2SQL is a hosted **text-to-SQL MCP server**. Connect Cursor, Claude, ChatGPT or VS Code to your **PostgreSQL, MySQL or SQL Server** database and ask questions in plain English. The agent reads the real schema, writes the SQL and runs it **read-only**: a SQL guard at the gateway rejects every write or DDL statement before it reaches your database.
+
+- Server URL (streamable HTTP, OAuth 2.1): `https://builder.ai2sql.io/api/chatgpt-mcp`
+- No API key or connection string in your editor config. You sign in with your AI2SQL account.
+- Tools: `generate_sql`, `fix_sql`, `optimize_sql`, `explain_sql`, `convert_sql`, `list_connections`, `describe_schema`, `run_query` (read-only, one `SELECT`/`WITH`, up to 1,000 rows)
+- Setup guide for every client: https://ai2sql.io/mcp
+
+### Cursor plugin
+
+This repo is also a Cursor plugin (`.cursor-plugin/plugin.json`). It adds the hosted MCP server (`mcp.json`) and a `query-database` skill that makes the agent check the live schema before it writes SQL.
+
+1. Install **AI2SQL** from the Cursor Marketplace, or open Cursor Settings → Plugins and add `https://github.com/mergisi/ai2sql-mcp`.
+2. Connect a database at https://builder.ai2sql.io (PostgreSQL, MySQL or SQL Server).
+3. The first time the agent calls an AI2SQL tool, Cursor opens the AI2SQL sign-in. Approve it.
+4. Ask: *"Which 10 customers spent the most last month?"*
+
+Free accounts get schema browsing and 5 SQL requests a day. Start, Pro and Team plans add unlimited SQL and `run_query` on your connected databases.
+
+---
+
+## Local npm server (API key, Claude Code)
+
+The rest of this README covers the original `ai2sql-mcp` npm package: a local stdio server that uses an AI2SQL API key.
+
 ## ✨ What is this?
 
 **AI2SQL MCP** turns plain English into SQL — right inside your Claude Code terminal. No tab-switching, no Stack Overflow, no "WHERE clause syntax" rabbit holes.

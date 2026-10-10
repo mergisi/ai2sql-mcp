@@ -1,0 +1,14 @@
+{
+  "name": "ai2sql",
+  "version": "1.0.0",
+  "description": "Text-to-SQL MCP server: ask questions about your PostgreSQL, MySQL or SQL Server database in plain English. The agent reads the real schema, writes the SQL and runs it read-only.",
+  "author": {
+    "name": "AI2SQL",
+    "email": "support@ai2sql.io"
+  },
+  "homepage": "https://ai2sql.io/mcp",
+  "repository": "https://github.com/mergisi/ai2sql-mcp",
+  "license": "MIT",
+  "keywords": ["sql", "text-to-sql", "database", "postgresql", "mysql", "sql-server", "mcp", "read-only"],
+  "logo": "assets/logo.png"
+}

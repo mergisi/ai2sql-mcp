@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "ai2sql": {
+      "url": "https://builder.ai2sql.io/api/chatgpt-mcp"
+    }
+  }
+}
